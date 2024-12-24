@@ -1,0 +1,134 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #8052ec, #d161ff);
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  border: 2px solid white;
+  width: 40px;
+  min-width: 450px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  padding: 30px 40px;
+}
+
+.input-task {
+  position: relative;
+  background-color: #fff;
+  padding: 30px 20px;
+  border-radius: 5px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, .3);
+}
+
+.input {
+  width: 70%;
+  height: 45px;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 12px;
+  color: #111;
+  border: 2px solid #d1d3d4;
+
+  position: relative;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #8052ec;
+}
+
+.add-btn {
+  float: right;
+  height: 45px;
+  width: 20%;    
+  font-size: 15px;
+  font-weight: 500;
+  background-color: #8052ec;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, .3);
+
+  position: relative;
+}
+
+.add-btn:hover {
+  opacity: 90%;
+}
+
+.add-btn:active {
+  top: 1px;
+}
+
+.task-list {
+  position: relative;
+  background-color: #fff;
+  padding: 30px 20px;
+  border-radius: 5px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, .3);
+  margin-top: 60px;
+  width: 100%;
+
+  position: relative;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+
+  border-bottom: 2px solid #d1d3d4;
+  margin-top: 10px;
+}
+
+.delete-btn {
+  margin-right: 12px;
+  height: 40px;
+  width: 40px;    
+  background-color: #8052ec;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+
+  position: relative;
+}
+
+.delete-btn:hover {
+  opacity: 90%;
+}
+
+.delete-btn:active {
+  top: 1px;
+}
+
+.task-text {
+  font-size: 15px;
+  padding: 12px;
+  cursor: pointer;
+  color: #111;
+}
+
+.trash {
+  scale: .6;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.night-mode {
+  text-align: center;
+}
