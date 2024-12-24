@@ -1,5 +1,5 @@
 import trashIcon from './img/trash-outline.svg';
-import React, { useRef } from 'react'
+import React, { useRef, useEffect } from 'react'
 import './App.css';
 
 function App() {
@@ -8,12 +8,27 @@ function App() {
 
   const inputRef = useRef(null);
 
+  useEffect(() => {
+    const savedTasks = JSON.parse(localStorage.getItem('tasks'));
+    if (savedTasks) {
+      SetTasks(savedTasks);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (tasks.length > 0) {
+      localStorage.setItem('tasks', JSON.stringify(tasks));
+    }
+  }, [tasks]);
+
   function AddTask() {
     if(inputValue) {
       SetTasks(prev => [...prev, {text: inputValue, completed: false}]);
       SetInputValue('');
 
-      inputRef.current.focus();
+      if (inputRef.current) {
+        inputRef.current.focus();
+      }
     }
   }
 
